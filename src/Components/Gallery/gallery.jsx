@@ -61,8 +61,8 @@ export default function Portfolio() {
       {/* GALLERY SECTION */}
       <section className="gallery-section">
         <div className="container text-center">
-          <h3 className="gallery-title">Gallery of all products</h3>
-          <p className="gallery-subtitle">
+          <h3 className="gallery-title fw-bold">Gallery of all products</h3>
+          <p className="gallery-subtitle fw-bold ">
             A glimpse of our premium products exported worldwide.
           </p>
 

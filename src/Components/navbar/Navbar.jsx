@@ -9,9 +9,9 @@ import {
   FaBlog,
   FaEnvelope,
 } from "react-icons/fa";
-import trimurathi from "../../assets/Logo/trimurathi.png";
+import trimurathi from "../../assets/Logo/trimurti.png";
 import "./Navbar.css";
-import LanguageSelector from "../LanguageSelector";
+// import LanguageSelector from "../LanguageSelector";
 
 const Navbar = () => {
   const API_BASE = import.meta.env.VITE_API_BASE_URL;
@@ -45,7 +45,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg fixed-top custom-navbar pt-4">
+    <nav className="navbar navbar-expand-lg fixed-top custom-navbar">
       <div className="container">
         {/* BRAND */}
         <NavLink
@@ -53,7 +53,7 @@ const Navbar = () => {
           to="/"
           onClick={closeNavbar}
         >
-          <img src={trimurathi} alt="Company Logo" className="navbar-logo" />
+          <img src={trimurathi} alt="Company Logo" className="navbar-logo pb-2" />
         </NavLink>
 
         {/* TOGGLER */}
@@ -139,7 +139,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="nav-right px-5 ">
-       <LanguageSelector/>
+       {/* <LanguageSelector/> */}
       </div>
       </div>
 

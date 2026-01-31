@@ -1,27 +1,29 @@
 .custom-footer {
-  background: linear-gradient(135deg, #3a1c71, #469ec4);
-  color: #ddd;
+  background: linear-gradient(135deg, #009B83, #009B83);
+  color: #eef0ef;
   padding: 60px 0 20px;
   font-size: 14px;
 }
 
 .footer-col {
   margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .footer-title {
   color: #fff;
   margin-bottom: 20px;
   font-weight: 600;
+  font-weight: bold;
 }
 
 .icon-circle {
-  color: #ff6ec7;
+  color: #eae5e8;
   margin-right: 8px;
 }
 
 .email {
-  color: #ff6ec7;
+  color: white;
 }
 
 .news-item {
@@ -38,25 +40,30 @@
   margin: 0;
   font-size: 13px;
   color: #eee;
+  
 }
 
 .news-item small {
-  color: #aaa;
+  color: #eee;
 }
 
 .footer-links {
   list-style: none;
-  padding: 8;
+  padding: 4;
 }
 
-.footer-links li {
-  margin-bottom: 10px;
-  cursor: pointer;
+/* IMPORTANT: Link styling */
+.footer-links li a {
+  text-decoration: none;
+  color: rgb(243, 242, 239);   /* इथे हवा तो color दे */
+  transition: color 0.3s ease;
 }
 
-.footer-links li:hover {
+/* Hover effect */
+.footer-links li a:hover {
   color: #ff6ec7;
 }
+
 
 .newsletter {
   display: flex;

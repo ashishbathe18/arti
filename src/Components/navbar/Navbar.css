@@ -7,7 +7,7 @@ body {
 
 /* ================= NAVBAR ================= */
 .custom-navbar {
-  background: linear-gradient(135deg, #3a1c71, #469ec4);
+  background: linear-gradient(135deg, #009B83, #009B83);
   height: 92px;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45);
   z-index: 1050;
@@ -21,7 +21,7 @@ body {
 
 /* ================= LOGO ================= */
 .navbar-logo {
-  height: 70px;
+  height:90px;
 }
 
 /* ================= LINKS ================= */
@@ -55,11 +55,11 @@ body {
   position: fixed;
   top: 92px;
   left: calc(50% + 120px);
-  background: linear-gradient(135deg, #3a1c71, #469ec4);
+  background: linear-gradient(135deg, #bcccca, #009B83);
   border-radius: 18px;
   padding: 8px;
   min-width: 300px;
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 25px 55px rgba(183, 180, 188, 0.35);
   z-index: 99999;
 }
 
@@ -106,7 +106,7 @@ body {
   }
 
   .navbar-collapse {
-    background: linear-gradient(135deg, #3a1c71, #469ec4);
+    background: linear-gradient(135deg, #009B83, #009B83);
     padding: 14px;
     border-radius: 12px;
     overflow: visible !important;

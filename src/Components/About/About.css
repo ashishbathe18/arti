@@ -56,7 +56,7 @@
   align-items: center;
   gap: 60px;
   padding: 90px 10%;
-  background-color: #f3faff;
+  background-color: white;
 }
 
 /* 
@@ -78,15 +78,15 @@
 } */
 
 .overview-text h2 {
-  font-size: 2.8rem;
-  color: #002f6c;
+  font-size: 5px;
+  color: white;
   margin-bottom: 18px;
   position: relative;
 }
 
 .overview-text h2::after {
   content: "";
-  width: 70px;
+  width: 80px;
   height: 3px;
   background-color: #d4b483;
   display: block;
@@ -99,7 +99,7 @@
   color: #555;
 } */
 .overview-text p {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   line-height: 1.8;
   color: #555;
   max-width: 700px;
@@ -163,7 +163,7 @@
 
 .our-story-section {
   padding: 90px 12%;
-  background: #fff;
+  background: white;
   text-align: center;
   transition: all 0.4s ease;
 }
@@ -236,7 +236,7 @@
 
 /* towel-section */
 .towel-features-section {
-  background-color: #f3faff;
+  background-color: white;
   padding: 90px 6%;
   text-align: center;
   overflow-x: hidden;
@@ -268,7 +268,7 @@
 }
 
 .feature-card {
-  background: #ffffff;
+  background: white;
   padding: 25px 28px;
   border-radius: 22px;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
@@ -364,7 +364,7 @@
 }
 
 .pillar-card {
-  background: #ffffff;
+  background: white;
   padding: 25px 35px;
   border-radius: 20px;
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
@@ -570,7 +570,7 @@
 
 /* CARD */
 .team-card {
-  background: #d8ebf8;
+  background: white;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);

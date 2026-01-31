@@ -217,7 +217,7 @@ useEffect(() => {
       <section className="showcase-section">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-md-7 position-relative text-center">
+            <div className="col-md-7 position-relative text-center ">
               <img src={laptop} alt="Agro Products" className="laptop-img" />
               <img src={mobile} alt="Agro" className="mobile-img" />
             </div>
@@ -243,7 +243,7 @@ useEffect(() => {
           <div className="row align-items-center">
             <div className="col-md-5 order-2 order-md-1">
               <div className="testimonial-box">
-                <img src={person} alt="Textile" className="profile-img rounded-circle" />
+                <img src={person} alt="Textile" className="profile-img" />
                 <h4>Textile Products</h4>
                 <span> Strength & Comfort</span>
                 <p>

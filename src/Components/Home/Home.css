@@ -181,7 +181,7 @@
 
 /* ================= TRUST STATS ================= */
 .trust-stats {
-  background: linear-gradient(135deg, #0f172a, #4474c0);
+  background: linear-gradient(135deg, #009B83, #009B83);
   color: #fff;
   display: flex;
   justify-content: space-around;
@@ -225,17 +225,18 @@
 
 .testimonial-box {
   padding-left: 40px;
+  
 }
 
 .profile-img {
-  width: 80px;
-  border-radius: 60%;
+  width: 100px;
+  border-radius: 30%;
   margin-bottom: 15px;
 }
 
 /* ================= FINAL CTA ================= */
 .final-cta {
-  background: linear-gradient(135deg, #0f172a, #4474c0);
+  background: linear-gradient(135deg, #009B83, #009B83);
   color: #fff;
   text-align: center;
   padding: 90px 20px;

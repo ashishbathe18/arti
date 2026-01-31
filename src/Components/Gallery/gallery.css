@@ -34,13 +34,14 @@
 .gallery-title {
   font-size: 32px;
   font-weight: 500;
-  color: #444;
+  color: #a0a59f;
 }
 
 .gallery-subtitle {
   max-width: 520px;
   margin: 10px auto 30px;
-  color: #7a876c;
+  color: #77d611;
+  font-size: 18px;
 }
 
 /* FILTER BUTTONS */
@@ -85,7 +86,7 @@
 
 .cta-box {
   width: 85%;
-  background-color: #359bc0;
+  background-color: #29c1af;
   border-radius: 40px;
   padding: 50px 60px;
   display: flex;

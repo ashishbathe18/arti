@@ -56,14 +56,14 @@ At Post - Palus,Tal-Palus Dist-Sangli (Maharashtra/India)-416310
             <h5 className="footer-title">
               <span className="icon-circle">📄</span> Quick Links
             </h5>
-            <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">about</Link></li>
-              <li ><Link to="/Products">Products</Link></li>
-              <li><Link to='/gallery'>gallery</Link></li>
-              <li><Link to="/Blog">Blog</Link></li>
-              <li><Link to="/Contact">Contact</Link></li>
-            </ul>
+            <ul className="footer-links fw-bold">
+  <li><Link to="/">Home</Link></li>
+  <li><Link to="/about">About</Link></li>
+  <li><Link to="/Products">Products</Link></li>
+  <li><Link to="/gallery">Gallery</Link></li>
+  <li><Link to="/Blog">Blog</Link></li>
+  <li><Link to="/Contact">Contact</Link></li>
+</ul>
           </div>
 
           {/* INSTAGRAM */}

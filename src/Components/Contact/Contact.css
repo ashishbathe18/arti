@@ -7,7 +7,7 @@
 
 /* ================= HEADER ================= */
 .contact-header {
-  background: linear-gradient(180deg, #1e6cfb, #6ea8ff);
+  background: linear-gradient(180deg, #009B83, #009B83);
   color: #fff;
   text-align: center;
   padding: 70px 20px;
@@ -52,10 +52,13 @@
 
 .info-block {
   margin-bottom: 22px;
+  font-size: 17px ;
+  font-weight: bold;
 }
 
 .info-block h6 {
-  font-weight: 600;
+  font-size: 19px ;
+  font-weight: bold;
 }
 
 .social-icons i {
