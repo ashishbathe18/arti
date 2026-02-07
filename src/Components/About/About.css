@@ -44,14 +44,6 @@
   animation: slideDown 1.2s ease forwards;
 }
 
-/* OVERVIEW */
-/* .about-overview {
-  display: flex;
-  gap: 40px;
-  padding: 80px 10%;
-  align-items: center;
-  background: #f8f9f6;
-} */
 
 .about-overview {
   display: grid;
@@ -62,10 +54,7 @@
   background-color: white;
 }
 
-/* 
-.overview-text {
-  flex: 1;
-} */
+
 
 .overview-text {
   display: flex;
@@ -74,17 +63,13 @@
   animation: slideFadeLeft 1.2s ease-in-out;
 }
 
-/* .overview-text h2 {
-  font-size: 2.4rem;
-  margin-bottom: 15px;
-  color: #2e5d42;
-} */
+
 
 .overview-text h2 {
-  font-size: 5px;
-  color: white;
-  margin-bottom: 18px;
-  position: relative;
+  font-size: 2.4rem;     /* FIX */
+  color: #002f6c;       /* FIX */
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .overview-text h2::after {
@@ -96,11 +81,6 @@
   margin-top: 12px;
 }
 
-/* .overview-text p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #555;
-} */
 .overview-text p {
   font-size: 1.08rem;
   line-height: 1.8;
@@ -108,21 +88,12 @@
   max-width: 700px;
 }
 
-/* .overview-image {
-  flex: 1;
-  max-width: 300px;
-} */
 
 .overview-image {
   animation: slideFadeRight 1.2s ease-in-out;
  
 }
 
-/* .overview-image img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.4s ease;
-} */
 
 .overview-image img {
   width: 100%;
@@ -160,9 +131,6 @@
   }
 }
 
-/* ===========================
-   OUR STORY SECTION
-=========================== */
 
 .our-story-section {
   padding: 90px 12%;
