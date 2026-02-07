@@ -32,8 +32,8 @@ body {
 
 .navbar-nav .nav-link {
   color: #ffffff !important;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -54,7 +54,7 @@ body {
 .product-float-card {
   position: fixed;
   top: 92px;
-  left: calc(50% + 120px);
+  left: calc(35% + 120px);
   background: linear-gradient(135deg, #bcccca, #009B83);
   border-radius: 18px;
   padding: 8px;
@@ -70,15 +70,15 @@ body {
   border-radius: 12px;
   font-size: 16px;
   font-weight: 600;
-  color: rgb(47, 142, 171);
+  color: rgba(230, 231, 230, 0.885);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .product-float-item:hover,
 .product-float-item.active {
-  background: #333;
-  color: #f0ad4e !important;
+ 
+  color: #c38710 !important;
 }
 
 /* ================= TOGGLER ================= */
@@ -166,6 +166,51 @@ body {
   border: none;
 }
 
+/* ===== FIX CENTER TOGGLER ISSUE ===== */
+.custom-toggler {
+  margin-left: auto;
+}
+
+/* OPTIONAL: Bigger & clean icon */
+.custom-toggler .navbar-toggler-icon {
+  width: 26px;
+  height: 26px;
+}
+
+/* ================= MOBILE TOGGLE FIX ================= */
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    width: 100%;
+    text-align: right;   /* ✅ RIGHT aligned */
+  }
+
+  .navbar-nav {
+    align-items: flex-end !important; /* ✅ right side */
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 20px;
+    justify-content: flex-end;
+    padding-right: 12px;
+  }
+
+  /* Products dropdown mobile */
+  .product-float-card {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    text-align: right;
+  }
+
+  .product-float-item {
+    text-align: right;
+  }
+}
 
 
 

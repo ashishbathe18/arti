@@ -46,32 +46,34 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top custom-navbar">
-      <div className="container">
-        {/* BRAND */}
-        <NavLink
-          className="navbar-brand d-flex align-items-center"
-          to="/"
-          onClick={closeNavbar}
-        >
-          <img src={trimurathi} alt="Company Logo" className="navbar-logo pb-2" />
-        </NavLink>
+    <div className="container">
+  {/* HEADER ROW */}
+  <div className="d-flex w-100 align-items-center">
+    <NavLink
+      className="navbar-brand"
+      to="/"
+      onClick={closeNavbar}
+    >
+      <img src={trimurathi} alt="Company Logo" className="navbar-logo pb-2" />
+    </NavLink>
 
-        {/* TOGGLER */}
-        <button
-          ref={navbarTogglerRef}
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <button
+      ref={navbarTogglerRef}
+      className="navbar-toggler custom-toggler ms-auto d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
+  </div>
 
-        {/* MENU */}
-        <div
-          className="collapse navbar-collapse navbar-collapse-fix"
-          id="navbarNav"
-        >
+  {/* MENU */}
+  <div
+    className="collapse navbar-collapse navbar-collapse-fix"
+    id="navbarNav"
+  >
+
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item">
               <NavLink className="nav-link" to="/" end onClick={closeNavbar}>
@@ -106,7 +108,7 @@ const Navbar = () => {
                         cat.slug ||
                         cat.name.toLowerCase().replace(/\s+/g, "-")
                       }`}
-                      className="product-float-item"
+                      className="product-float-item hover"
                       onClick={() => {
                         setShowProducts(false);
                         closeNavbar();
