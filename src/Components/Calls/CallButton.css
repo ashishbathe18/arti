@@ -1,6 +1,6 @@
 .call-float {
   position: fixed;
-  bottom: 90px; /* above WhatsApp */
+  bottom: 120px; /* above WhatsApp */
   right: 20px;
   z-index: 9999;
 
@@ -21,8 +21,8 @@
 }
 
 .call-float img {
-  width: 50px;
-  height: 50px;
+  width: 120px;
+  height: 120px;
 }
 
 .call-float:hover {

@@ -23,8 +23,8 @@
 
 /* Image inside button */
 .whatsapp-float img {
-  width: 40px;
-  height: 40px;
+  width: 120px;
+  height: 120px;
 }
 
 /* Hover effect (desktop only) */
@@ -45,8 +45,8 @@
   }
 
   .whatsapp-float img {
-    width: 24px;
-    height: 24px;
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -74,7 +74,7 @@
   }
 
   .whatsapp-float img {
-    width: 32px;
-    height: 32px;
+    width: 120px;
+    height:120px;
   }
 }
