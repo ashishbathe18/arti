@@ -2,7 +2,7 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 50vh;          /* 🔥 HERO HEIGHT REDUCED */
+  height: 50vh;
   min-height: 50vh;
   overflow: hidden;
   display: flex;
@@ -10,7 +10,6 @@
   justify-content: center;
 }
 
-/* Dark overlay */
 .hero-section::before {
   content: "";
   position: absolute;
@@ -19,27 +18,23 @@
   z-index: 1;
 }
 
-/* Hero Images */
 .hero-image {
   position: absolute;
   inset: 0;
-  height:100%;
   width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transform: scale(1.02);   /* 🔥 LESS ZOOM */
+  transform: scale(1.03);
   transition: opacity 1s ease, transform 1s ease;
-  will-change: transform, opacity;
 }
 
 .hero-image.active {
   opacity: 1;
   transform: scale(1);
-  
 }
 
-/* Hero Content */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -47,27 +42,26 @@
   color: #fff;
   max-width: 800px;
   padding: 0 20px;
-  animation: slideDown 1.2s ease forwards;
 }
 
 .hero-content h6 {
   letter-spacing: 2px;
-  text-transform: uppercase;
   color: #ffc107;
+  margin-bottom: 6px;
 }
 
 .hero-content h1 {
   font-size: 42px;
   font-weight: 800;
-  margin: 12px 0;
+  margin-bottom: 12px;
 }
 
 .hero-content p {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
-/* Button */
+/* ================= BUTTON ================= */
 .home-btn {
   margin-top: 22px;
   padding: 14px 36px;
@@ -84,21 +78,11 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero-section {
-    height: 42vh;      /* 🔥 MOBILE MORE COMPACT */
-    min-height: 42vh;
-  }
-
-  .hero-content h1 {
-    font-size: 32px;
-  }
-}
-
+/* ================= ABOUT ================= */
 .about-home {
   padding: 70px 20px;
   background: #ffffff;
+  text-align: center;
 }
 
 .about-home h2 {
@@ -110,11 +94,10 @@
 .about-home p {
   max-width: 850px;
   margin: auto;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.8;
   color: #555;
 }
-
 
 /* ================= FEATURES ================= */
 .features-container {
@@ -136,27 +119,17 @@
   margin-bottom: 15px;
 }
 
-.feature-box h4 {
-  font-weight: 700;
-}
-
 .divider {
   width: 1px;
   height: 80px;
   background: #ddd;
 }
 
-/* ================= WHY CHOOSE US ================= */
+/* ================= WHY CHOOSE ================= */
 .why-choose {
   padding: 80px 5%;
   background: #f8fafc;
   text-align: center;
-}
-
-.why-choose h2 {
-  font-size: 34px;
-  font-weight: 800;
-  margin-bottom: 40px;
 }
 
 .why-grid {
@@ -166,41 +139,20 @@
   flex-wrap: wrap;
 }
 
-.why-box {
-  max-width: 260px;
-}
-
-.why-box img {
-  width: 60px;
-  margin-bottom: 15px;
-}
-
-.why-box h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-/* ================= TRUST STATS ================= */
+/* ================= TRUST ================= */
 .trust-stats {
   background: linear-gradient(135deg, #009B83, #009B83);
   color: #fff;
   display: flex;
   justify-content: space-around;
   padding: 70px 5%;
-  text-align: center;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .stat-box h3 {
   font-size: 40px;
-  font-weight: 800;
   color: #ffc107;
-}
-
-.stat-box p {
-  margin-top: 8px;
-  font-size: 15px;
 }
 
 /* ================= SHOWCASE ================= */
@@ -227,13 +179,11 @@
 
 .testimonial-box {
   padding-left: 40px;
-  
 }
 
 .profile-img {
-  width: 100px;
+  width: 90px;
   border-radius: 30%;
-  margin-bottom: 15px;
 }
 
 /* ================= FINAL CTA ================= */
@@ -247,26 +197,27 @@
 .final-cta h2 {
   font-size: 36px;
   font-weight: 800;
-  margin-bottom: 15px;
 }
 
-.final-cta p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 19px;
-  line-height: 1.7;
-}
-
-/* ================= RESPONSIVE ================= */
+/* =================================================
+   📱 MOBILE VIEW – CLEAN & READABLE
+   ================================================= */
 @media (max-width: 768px) {
+
+  /* HERO */
   .hero-section {
     height: 55vh;
   }
 
   .hero-content h1 {
-    font-size: 34px;
+    font-size: 30px;
   }
 
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  /* FEATURES */
   .features-container {
     flex-direction: column;
   }
@@ -275,30 +226,47 @@
     display: none;
   }
 
+  /* SHOWCASE */
+  .laptop-img {
+    width: 80%;
+    max-width: 260px;
+    opacity: 0.3;
+    filter: blur(1px);
+    margin: auto;
+    display: block;
+  }
+
   .mobile-img {
-    position: static;
-    margin-top: 20px;
+    position: relative;
+    width: 220px;
+    margin: -110px auto 0;
+    display: block;
+    right: auto;
+    bottom: auto;
+    z-index: 5;
   }
 
   .testimonial-box {
     padding-left: 0;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
+  /* STACK EVERYTHING */
   .why-grid,
   .trust-stats {
     flex-direction: column;
     gap: 30px;
   }
+
+  .about-home p,
+  .final-cta p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
 }
 
 /* ================= ANIMATION ================= */
-/* @keyframes float {
-  0% { transform: scale(1) translateY(0); }
-  50% { transform: scale(1.03) translateY(-6px); }
-  100% { transform: scale(1) translateY(0); }
-} */
 .home-btn {
   animation: pulse 2.5s infinite;
 }
