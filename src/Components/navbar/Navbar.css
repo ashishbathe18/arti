@@ -21,7 +21,7 @@ body {
 
 /* ================= LOGO ================= */
 .navbar-logo {
-  height:90px;
+  height: 90px;
 }
 
 /* ================= LINKS ================= */
@@ -63,12 +63,11 @@ body {
   z-index: 99999;
 }
 
-/* Dropdown item */
 .product-float-item {
   display: block;
   padding: 16px 18px;
   border-radius: 12px;
-  font-size: 16px;
+  font-size: 16px; /* desktop */
   font-weight: 600;
   color: rgba(230, 231, 230, 0.885);
   text-decoration: none;
@@ -77,20 +76,48 @@ body {
 
 .product-float-item:hover,
 .product-float-item.active {
- 
   color: #c38710 !important;
 }
 
 /* ================= TOGGLER ================= */
-.navbar-toggler {
-  border-color: rgb(61, 181, 210);
+.custom-toggler {
+  width: 48px;
+  height: 40px;
+  border: none;
+  padding: 0;
+  position: relative;
 }
 
-.navbar-toggler-icon {
-  filter: invert(1);
+.custom-toggler .navbar-toggler-icon {
+  background-image: none !important;
 }
 
-/* ================= MOBILE ================= */
+.custom-toggler::before,
+.custom-toggler::after,
+.custom-toggler span {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.custom-toggler::before {
+  top: 8px;
+}
+
+.custom-toggler span {
+  top: 18px;
+}
+
+.custom-toggler::after {
+  bottom: 8px;
+}
+
+/* ================= MOBILE (🔥 ALL TEXT BIGGER) ================= */
 @media (max-width: 991px) {
   body {
     padding-top: 70px;
@@ -101,121 +128,67 @@ body {
     padding: 10px 0;
   }
 
-  .navbar-nav {
-    gap: 12px;
-  }
-
   .navbar-collapse {
     background: linear-gradient(135deg, #009B83, #009B83);
-    padding: 14px;
+    padding: 16px;
     border-radius: 12px;
     overflow: visible !important;
-  }
-
-  .product-float-card {
-    position: static;
-    transform: none;
     width: 100%;
-    margin-top: 10px;
-    box-shadow: none;
-  }
-}
-
-/* =====================================================
-   🔥 BOOTSTRAP SCROLLBAR KILLER (FINAL FIX)
-   ===================================================== */
-.navbar-expand-lg .navbar-collapse,
-.navbar-collapse.show {
-  max-height: none !important;
-  overflow: visible !important;
-}
-
-@media (max-width: 991px) {
-  .navbar-collapse {
-    max-height: none !important;
-    overflow: visible !important;
-  }
-}
-
-
-/* ============================================= */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #0d6efd;
-  color: white;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-
-/* Google translate dropdown clean look */
-#google_translate_element select {
-  padding: 5px;
-  border-radius: 4px;
-  border: none;
-}
-
-/* ===== FIX CENTER TOGGLER ISSUE ===== */
-.custom-toggler {
-  margin-left: auto;
-}
-
-/* OPTIONAL: Bigger & clean icon */
-.custom-toggler .navbar-toggler-icon {
-  width: 26px;
-  height: 26px;
-}
-
-/* ================= MOBILE TOGGLE FIX ================= */
-@media (max-width: 991px) {
-
-  .navbar-collapse {
-    width: 100%;
-    text-align: right;   /* ✅ RIGHT aligned */
+    text-align: right;
   }
 
   .navbar-nav {
-    align-items: flex-end !important; /* ✅ right side */
+    gap: 16px;
+    align-items: flex-end !important;
   }
 
   .navbar-nav .nav-item {
     width: 100%;
   }
 
+  /* 🔥 ALL MENU TEXT BIG */
   .navbar-nav .nav-link {
-    font-size: 20px;
+    font-size: 24px;        /* ✅ increased */
+    font-weight: 700;
     justify-content: flex-end;
-    padding-right: 12px;
+    padding: 14px 16px;
   }
 
-  /* Products dropdown mobile */
+  /* 🔥 PRODUCTS DROPDOWN */
   .product-float-card {
     position: static;
     width: 100%;
-    margin-top: 8px;
+    margin-top: 12px;
+    box-shadow: none;
     text-align: right;
   }
 
   .product-float-item {
+    font-size: 22px;        /* ✅ categories bigger */
+    font-weight: 700;
+    line-height: 1.7;
+    padding: 18px 16px;
     text-align: right;
   }
 }
 
+/* =====================================================
+   🔥 BOOTSTRAP SCROLLBAR KILLER
+===================================================== */
+.navbar-expand-lg .navbar-collapse,
+.navbar-collapse.show {
+  max-height: none !important;
+  overflow: visible !important;
+}
 
+/* ================= EXTRA ================= */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
 
-
-
-
-
-/* =============================================== */
+#google_translate_element select {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+}
