@@ -14,11 +14,6 @@ body {
   overflow: visible !important;
 }
 
-/* 🚀 CRITICAL FIX */
-.navbar-collapse-fix {
-  overflow: visible !important;
-}
-
 /* ================= LOGO ================= */
 .navbar-logo {
   height: 90px;
@@ -67,22 +62,21 @@ body {
   display: block;
   padding: 16px 18px;
   border-radius: 12px;
-  font-size: 16px; /* desktop */
+  font-size: 16px;
   font-weight: 600;
   color: rgba(230, 231, 230, 0.885);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.product-float-item:hover,
-.product-float-item.active {
+.product-float-item:hover {
   color: #c38710 !important;
 }
 
 /* ================= TOGGLER ================= */
 .custom-toggler {
-  width: 48px;
-  height: 40px;
+  width: 40px;          /* 🔽 smaller */
+  height: 34px;
   border: none;
   padding: 0;
   position: relative;
@@ -99,82 +93,77 @@ body {
   position: absolute;
   left: 6px;
   right: 6px;
-  height: 4px;
+  height: 3px;          /* 🔽 thinner */
   background-color: #000;
   border-radius: 4px;
-  transition: all 0.3s ease;
 }
 
 .custom-toggler::before {
-  top: 8px;
+  top: 7px;
 }
 
 .custom-toggler span {
-  top: 18px;
+  top: 15px;
 }
 
 .custom-toggler::after {
-  bottom: 8px;
+  bottom: 7px;
 }
 
-/* ================= MOBILE (🔥 ALL TEXT BIGGER) ================= */
+/* ================= MOBILE (HEIGHT FIXED 🔥) ================= */
 @media (max-width: 991px) {
+
   body {
-    padding-top: 70px;
+    padding-top: 64px;     /* 🔽 reduced */
   }
 
   .custom-navbar {
     height: auto;
-    padding: 10px 0;
+    padding: 6px 0;        /* 🔽 reduced */
+  }
+
+  .navbar-logo {
+    height: 60px;          /* 🔽 reduced */
   }
 
   .navbar-collapse {
     background: linear-gradient(135deg, #009B83, #009B83);
-    padding: 16px;
-    border-radius: 12px;
-    overflow: visible !important;
-    width: 100%;
+    padding: 10px;         /* 🔽 reduced */
+    border-radius: 10px;
     text-align: right;
   }
 
   .navbar-nav {
-    gap: 16px;
+    gap: 10px;
     align-items: flex-end !important;
   }
 
-  .navbar-nav .nav-item {
-    width: 100%;
-  }
-
-  /* 🔥 ALL MENU TEXT BIG */
   .navbar-nav .nav-link {
-    font-size: 24px;        /* ✅ increased */
+    font-size: 22px;       /* ✅ still big */
     font-weight: 700;
+    padding: 10px 12px;    /* 🔽 reduced */
     justify-content: flex-end;
-    padding: 14px 16px;
   }
 
-  /* 🔥 PRODUCTS DROPDOWN */
+  /* PRODUCTS DROPDOWN */
   .product-float-card {
     position: static;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 8px;
     box-shadow: none;
     text-align: right;
   }
 
   .product-float-item {
-    font-size: 22px;        /* ✅ categories bigger */
+    font-size: 20px;       /* ✅ readable */
     font-weight: 700;
-    line-height: 1.7;
-    padding: 18px 16px;
+    padding: 12px;
+    line-height: 1.6;
     text-align: right;
   }
 }
 
-/* =====================================================
-   🔥 BOOTSTRAP SCROLLBAR KILLER
-===================================================== */
+/* ================= BOOTSTRAP FIX ================= */
 .navbar-expand-lg .navbar-collapse,
 .navbar-collapse.show {
   max-height: none !important;
