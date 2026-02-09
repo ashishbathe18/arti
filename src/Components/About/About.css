@@ -8,7 +8,9 @@
 .about-hero {
   position: relative;
   width: 100%;
+    min-height: 480px;
   height: 47vh; /* FULL SCREEN */
+  
 }
 
 .about-hero img {

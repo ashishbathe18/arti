@@ -59,7 +59,7 @@ At Post - Palus,Tal-Palus Dist-Sangli (Maharashtra/India)-416310
             <ul className="footer-links fw-bold">
   <li><Link to="/">Home</Link></li>
   <li><Link to="/about">About</Link></li>
-  <li><Link to="/Products">Products</Link></li>
+  <li><Link to="/product/agro">Products</Link></li>
   <li><Link to="/gallery">Gallery</Link></li>
   <li><Link to="/Blog">Blog</Link></li>
   <li><Link to="/Contact">Contact</Link></li>

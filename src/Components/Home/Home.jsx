@@ -124,7 +124,7 @@ useEffect(() => {
 
 
       {/* ===== FEATURES ===== */}
-      <section className="features-container">
+      <section className="features-container pt-1 ">
         <div className="feature-box">
           <img src={quality} alt="Quality" />
           <h4>Certified Quality</h4>
@@ -167,8 +167,8 @@ useEffect(() => {
 </section>
 
 {/* why choose us */}
-<section className="why-choose">
-  <h2>Why Choose Us</h2>
+<section className="why-choose ">
+  <h1 className=" fw-bold pb-4">Why Choose Us</h1>
   <div className="why-grid">
     <div className="why-box">
       <h3>Global Standards</h3>
@@ -283,7 +283,7 @@ useEffect(() => {
         </div>
       </section>
       <section className="final-cta">
-        <h2>Looking for a Reliable Export Partner?</h2>
+        <h2>Looking for a Reliable Export Partner ?</h2>
         <p>
           Connect with us today to receive a customized export quotation
           tailored to your business needs.

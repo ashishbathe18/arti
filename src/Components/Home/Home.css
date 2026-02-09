@@ -80,7 +80,7 @@
 
 /* ================= ABOUT ================= */
 .about-home {
-  padding: 70px 20px;
+  padding: 30px ;
   background: #ffffff;
   text-align: center;
 }
@@ -127,7 +127,7 @@
 
 /* ================= WHY CHOOSE ================= */
 .why-choose {
-  padding: 80px 5%;
+  padding: 80px 15%;
   background: #f8fafc;
   text-align: center;
 }
@@ -263,6 +263,7 @@
   .final-cta p {
     font-size: 16px;
     line-height: 1.8;
+    
   }
 }
 
