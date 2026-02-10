@@ -15,9 +15,25 @@ body {
 
 /* ================= LOGO ================= */
 .navbar-logo {
-  height: 1300px;
-  width: 65px;
+  height: 120px;        /* desktop */
+  width: auto;          /* image distort hoणार नाही */
+  max-height: 100%;
 }
+
+/* ================= TABLET / DASHBOARD ================= */
+@media (max-width: 991px) {
+  .navbar-logo {
+    height: 90px;       /* dashboard + tablet */
+  }
+}
+
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 576px) {
+  .navbar-logo {
+    height: 60px;       /* mobile – perfect balance */
+  }
+}
+
 
 /* ================= DESKTOP LINKS ================= */
 .navbar-nav {
