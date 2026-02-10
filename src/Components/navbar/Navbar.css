@@ -11,23 +11,21 @@ body {
   height: 92px;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45);
   z-index: 1050;
-  overflow: visible !important;
 }
 
 /* ================= LOGO ================= */
 .navbar-logo {
-  height: 90px;
+  height: 85px;
 }
 
-/* ================= LINKS ================= */
+/* ================= DESKTOP LINKS ================= */
 .navbar-nav {
-  gap: 48px;
-  overflow: visible !important;
+  gap: 42px;
 }
 
 .navbar-nav .nav-link {
   color: #ffffff !important;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -40,33 +38,30 @@ body {
   color: #f0ad4e !important;
 }
 
-/* ================= PRODUCTS ================= */
+/* ================= PRODUCTS DESKTOP ================= */
 .product-nav {
   position: relative;
 }
 
-/* ================= PRODUCT DROPDOWN ================= */
 .product-float-card {
   position: fixed;
   top: 92px;
   left: calc(35% + 120px);
   background: linear-gradient(135deg, #bcccca, #009B83);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 8px;
-  min-width: 300px;
+  min-width: 280px;
   box-shadow: 0 25px 55px rgba(183, 180, 188, 0.35);
   z-index: 99999;
 }
 
 .product-float-item {
   display: block;
-  padding: 16px 18px;
-  border-radius: 12px;
+  padding: 14px 16px;
   font-size: 16px;
   font-weight: 600;
-  color: rgba(230, 231, 230, 0.885);
+  color: rgba(230, 231, 230, 0.9);
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .product-float-item:hover {
@@ -75,11 +70,12 @@ body {
 
 /* ================= TOGGLER ================= */
 .custom-toggler {
-  width: 40px;          /* 🔽 smaller */
-  height: 34px;
+  width: 32px;
+  height: 24px;
   border: none;
   padding: 0;
   position: relative;
+  background: transparent;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -91,79 +87,80 @@ body {
 .custom-toggler span {
   content: "";
   position: absolute;
-  left: 6px;
-  right: 6px;
-  height: 3px;          /* 🔽 thinner */
+  left: 4px;
+  right: 4px;
+  height: 2.5px;
   background-color: #000;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
-.custom-toggler::before {
-  top: 7px;
-}
+.custom-toggler::before { top: 4px; }
+.custom-toggler span { top: 10px; }
+.custom-toggler::after { bottom: 4px; }
 
-.custom-toggler span {
-  top: 15px;
-}
-
-.custom-toggler::after {
-  bottom: 7px;
-}
-
-/* ================= MOBILE (HEIGHT FIXED 🔥) ================= */
+/* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 991px) {
 
+  /* BODY OFFSET */
   body {
-    padding-top: 64px;     /* 🔽 reduced */
+    padding-top: 56px;
   }
 
+  /* SLIM NAVBAR */
   .custom-navbar {
     height: auto;
-    padding: 6px 0;        /* 🔽 reduced */
+    min-height: 56px;
+    padding: 4px 0;
   }
 
+  /* LOGO SMALL */
   .navbar-logo {
-    height: 60px;          /* 🔽 reduced */
+    height: 40px;
   }
 
+  /* COLLAPSE AREA */
   .navbar-collapse {
     background: linear-gradient(135deg, #009B83, #009B83);
-    padding: 10px;         /* 🔽 reduced */
+    padding: 8px 10px;
+    margin-top: 4px;
     border-radius: 10px;
-    text-align: right;
   }
 
+  /* VERTICAL MENU */
   .navbar-nav {
-    gap: 10px;
-    align-items: flex-end !important;
+    flex-direction: column;
+    align-items: center !important;
+    gap: 6px;
+    width: 100%;
   }
 
   .navbar-nav .nav-link {
-    font-size: 22px;       /* ✅ still big */
-    font-weight: 700;
-    padding: 10px 12px;    /* 🔽 reduced */
-    justify-content: flex-end;
+    font-size: 18px;
+    padding: 6px 0;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
-  /* PRODUCTS DROPDOWN */
+  /* PRODUCTS INSIDE NAVBAR */
   .product-float-card {
     position: static;
     width: 100%;
-    margin-top: 8px;
+    margin-top: 4px;
+    padding: 0;
+    background: transparent;
     box-shadow: none;
-    text-align: right;
+    text-align: center;
   }
 
   .product-float-item {
-    font-size: 20px;       /* ✅ readable */
-    font-weight: 700;
-    padding: 12px;
-    line-height: 1.6;
-    text-align: right;
+    font-size: 16px;
+    padding: 6px 0;
+    line-height: 1.4;
   }
 }
 
-/* ================= BOOTSTRAP FIX ================= */
+/* ================= BOOTSTRAP SAFETY ================= */
 .navbar-expand-lg .navbar-collapse,
 .navbar-collapse.show {
   max-height: none !important;

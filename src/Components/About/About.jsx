@@ -61,7 +61,7 @@ function About() {
       {/* COMPANY OVERVIEW */}
       <section className="about-overview fade-up">
         <div className="overview-text slide-left">
-          <h2>Prathap Desai</h2>
+          <h2>Pratap Desai</h2>
           <span className="text-muted fw-medium fw-bolder fs-5 ">
             CEO
           </span>

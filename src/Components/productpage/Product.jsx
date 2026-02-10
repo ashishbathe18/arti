@@ -64,7 +64,7 @@ function Product() {
   /* ================= UI ================= */
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-5">
       <h3 className="mb-4">{activeCategory?.name || "Products"}</h3>
 
       {loading && <p>Loading products...</p>}
