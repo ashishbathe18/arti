@@ -54,7 +54,7 @@ const Navbar = () => {
       to="/"
       onClick={closeNavbar}
     >
-      <img src={trimurathi} alt="Company Logo" className="navbar-logo pb-2 " style={{height:"80px",width:"80px"}} />
+      <img src={trimurathi} alt="Company Logo" className="navbar-logo pb-2 " style={{height:"60px",width:"60px"}} />
     </NavLink>
 
     <button
