@@ -79,7 +79,7 @@ useEffect(() => {
       </Helmet>
  
       {/* ===== HERO SECTION ===== */}
-      <header className="hero-section ">
+      <header className="hero-section  ">
         {heroImages.map((img, index) => (
           <div
             key={index}
@@ -88,7 +88,7 @@ useEffect(() => {
           />
         ))}
 
-        <div className="hero-content">
+        <div className="hero-content mt-5">
           <h6>Trusted Export Partner</h6>
 
           <h1 className="title">
