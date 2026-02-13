@@ -9,26 +9,30 @@ body {
 .custom-navbar {
   background: linear-gradient(135deg, #009B83, #009B83);
   height: 92px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
   z-index: 1050;
+  transition: all 0.3s ease;
 }
+
 /* ================= LOGO ================= */
 .navbar-logo {
-  height: 90px;
+  height: 80px;
+  transition: 0.3s;
 }
-/* ================= DESKTOP LINKS ================= */
+
+/* ================= NAV LINKS DESKTOP ================= */
 .navbar-nav {
-  gap: 42px;
+  gap: 40px;
 }
 
 .navbar-nav .nav-link {
   color: #ffffff !important;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 6px;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
 .navbar-nav .nav-link:hover,
@@ -36,168 +40,102 @@ body {
   color: #f0ad4e !important;
 }
 
-/* ================= PRODUCTS DESKTOP ================= */
+/* ================= PRODUCTS DESKTOP DROPDOWN ================= */
 .product-nav {
   position: relative;
 }
 
 .product-float-card {
-  position: fixed;
-  top: 92px;
-  left: calc(35% + 120px);
+  position: absolute;
+  top: 100%;
+  left: 0;
   background: linear-gradient(135deg, #bcccca, #009B83);
-  border-radius: 16px;
-  padding: 8px;
-  min-width: 280px;
-  box-shadow: 0 25px 55px rgba(183, 180, 188, 0.35);
-  z-index: 99999;
+  border-radius: 14px;
+  padding: 10px;
+  min-width: 260px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.product-nav:hover .product-float-card {
+  display: block;
 }
 
 .product-float-item {
   display: block;
-  padding: 14px 16px;
-  font-size: 16px;
+  padding: 12px 14px;
+  font-size: 15px;
   font-weight: 600;
-  color: rgba(230, 231, 230, 0.9);
+  color: #fff;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .product-float-item:hover {
-  color: #c38710 !important;
+  color: #f0ad4e !important;
 }
 
 /* ================= TOGGLER ================= */
 .custom-toggler {
-  width: 32px;
-  height: 24px;
+  width: 30px;
+  height: 22px;
   border: none;
-  padding: 0;
-  position: relative;
   background: transparent;
+  position: relative;
 }
 
-.custom-toggler .navbar-toggler-icon {
-  background-image: none !important;
-}
-
+.custom-toggler span,
 .custom-toggler::before,
-.custom-toggler::after,
-.custom-toggler span {
+.custom-toggler::after {
   content: "";
   position: absolute;
-  left: 4px;
-  right: 4px;
+  left: 0;
+  right: 0;
   height: 2.5px;
-  background-color: #000;
+  background: #fff;
   border-radius: 3px;
+  transition: 0.3s;
 }
 
-.custom-toggler::before { top: 4px; }
-.custom-toggler span { top: 10px; }
-.custom-toggler::after { bottom: 4px; }
+.custom-toggler::before { top: 0; }
+.custom-toggler span { top: 9px; }
+.custom-toggler::after { bottom: 0; }
+
+/* ================= RIGHT SECTION ================= */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ================= TABLET RESPONSIVE ================= */
+@media (max-width: 1199px) {
+  .navbar-nav {
+    gap: 25px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 20px;
+  }
+}
 
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 991px) {
 
-  /* BODY OFFSET */
   body {
-    padding-top: 56px;
+    padding-top: 65px;
   }
 
-  /* SLIM NAVBAR */
   .custom-navbar {
     height: auto;
-    min-height: 56px;
-    padding: 4px 0;
+    min-height: 65px;
+    padding: 8px 0;
   }
 
-  /* LOGO SMALL */
   .navbar-logo {
-    height: 40px;
+    height: 45px;
   }
 
-  /* COLLAPSE AREA */
-  .navbar-collapse {
-    background: linear-gradient(135deg, #009B83, #009B83);
-    padding: 8px 10px;
-    margin-top: 4px;
-    border-radius: 10px;
-  }
-
-  /* VERTICAL MENU */
-  .navbar-nav {
-    flex-direction: column;
-    align-items: center !important;
-    gap: 6px;
-    width: 100%;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 18px;
-    padding: 6px 0;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-  }
-
-  /* PRODUCTS INSIDE NAVBAR */
-  .product-float-card {
-    position: static;
-    width: 100%;
-    margin-top: 4px;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-    text-align: center;
-  }
-
-  .product-float-item {
-    font-size: 16px;
-    padding: 6px 0;
-    line-height: 1.4;
-  }
-}
-
-/* ================= BOOTSTRAP SAFETY ================= */
-.navbar-expand-lg .navbar-collapse,
-.navbar-collapse.show {
-  max-height: none !important;
-  overflow: visible !important;
-}
-
-/* ================= EXTRA ================= */
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-
-#google_translate_element select {
-  padding: 5px;
-  border-radius: 4px;
-  border: none;
-}
-/* ================= IMPROVED MOBILE RESPONSIVE ================= */
-@media (max-width: 991px) {
-
-  /* Navbar height fix */
-  .custom-navbar {
-    height: auto;
-    min-height: 60px;
-    padding: 6px 0;
-  }
-
-  /* Logo smaller */
-  .navbar-logo {
-    height: 45px !important;
-  }
-
-  /* Toggler alignment */
-  .custom-toggler {
-    width: 28px;
-    height: 22px;
-  }
-
-  /* Collapse menu full width */
   .navbar-collapse {
     background: linear-gradient(135deg, #009B83, #009B83);
     margin-top: 10px;
@@ -206,55 +144,57 @@ body {
     text-align: center;
   }
 
-  /* Vertical layout */
   .navbar-nav {
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 15px;
     width: 100%;
   }
 
-  /* Nav links smaller */
   .navbar-nav .nav-link {
-    font-size: 18px !important;
-    font-weight: 600;
+    font-size: 18px;
     justify-content: center;
-    padding: 8px 0;
   }
 
-  /* Products dropdown inside mobile */
-  .product-nav {
-    width: 100%;
-  }
-
+  /* Dropdown inside mobile */
   .product-float-card {
-    position: static !important;
+    position: static;
+    display: block;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    border-radius: 10px;
     margin-top: 5px;
-    padding: 5px 0;
+    padding: 8px 0;
     box-shadow: none;
   }
 
   .product-float-item {
-    display: block;
     padding: 8px 0;
     font-size: 15px;
-    color: #fff !important;
   }
 
-  .product-float-item:hover {
-    color: #f0ad4e !important;
-  }
-
-  /* Remove large gap from desktop */
-  .navbar-nav {
-    gap: 10px;
-  }
-
-  /* Right section fix */
   .nav-right {
     display: none;
   }
+}
 
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+
+  .navbar-logo {
+    height: 38px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 16px;
+  }
+
+  .product-float-item {
+    font-size: 14px;
+  }
+}
+
+/* ================= BOOTSTRAP FIX ================= */
+.navbar-expand-lg .navbar-collapse,
+.navbar-collapse.show {
+  max-height: none !important;
+  overflow: visible !important;
 }
