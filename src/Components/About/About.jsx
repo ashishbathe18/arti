@@ -99,7 +99,7 @@ Every product is carefully sourced, processed, and packaged to meet global quali
           </span>
 
           <p>
-            Prithibha Desai is actively involved in supporting and expanding the company’s import–export operations, playing a key role in strengthening its global presence. Working closely with international partners and stakeholders, she ensures consistent quality standards, seamless coordination, and efficient execution across global markets. With a forward-looking and detail-oriented approach, Prithibha focuses on nurturing strong client relationships, adapting to evolving international trade requirements, and supporting sustainable business growth. Her leadership reflects the company’s commitment to continuity, innovation, and long-term reliability in global trade, while also highlighting the strength of women-led excellence in international business.
+            Pratibha Desai is actively involved in supporting and expanding the company’s import–export operations, playing a key role in strengthening its global presence. Working closely with international partners and stakeholders, she ensures consistent quality standards, seamless coordination, and efficient execution across global markets. With a forward-looking and detail-oriented approach, Prithibha focuses on nurturing strong client relationships, adapting to evolving international trade requirements, and supporting sustainable business growth. Her leadership reflects the company’s commitment to continuity, innovation, and long-term reliability in global trade, while also highlighting the strength of women-led excellence in international business.
           </p>
         </div>
         <div className="overview-image slide-right hover-zoom">
