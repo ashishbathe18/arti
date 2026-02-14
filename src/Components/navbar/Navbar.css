@@ -8,17 +8,27 @@ body {
 /* ================= NAVBAR ================= */
 .custom-navbar {
   background: linear-gradient(135deg, #009B83, #009B83);
-  height: 92px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  height: 110px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
   z-index: 1050;
   transition: all 0.3s ease;
+  padding: 0;
 }
 
 /* ================= LOGO ================= */
 .navbar-logo {
-  height: 80px;
-  transition: 0.3s;
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
 
 /* ================= NAV LINKS DESKTOP ================= */
 .navbar-nav {
@@ -27,12 +37,13 @@ body {
 
 .navbar-nav .nav-link {
   color: #ffffff !important;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 6px;
   transition: 0.3s;
+  padding: 0;
 }
 
 .navbar-nav .nav-link:hover,
@@ -52,9 +63,10 @@ body {
   background: linear-gradient(135deg, #bcccca, #009B83);
   border-radius: 14px;
   padding: 10px;
-  min-width: 260px;
+  min-width: 240px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   display: none;
+  animation: fadeIn 0.3s ease;
 }
 
 .product-nav:hover .product-float-card {
@@ -63,8 +75,8 @@ body {
 
 .product-float-item {
   display: block;
-  padding: 12px 14px;
-  font-size: 15px;
+  padding: 10px 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #fff;
   text-decoration: none;
@@ -77,8 +89,8 @@ body {
 
 /* ================= TOGGLER ================= */
 .custom-toggler {
-  width: 30px;
-  height: 22px;
+  width: 28px;
+  height: 20px;
   border: none;
   background: transparent;
   position: relative;
@@ -98,7 +110,7 @@ body {
 }
 
 .custom-toggler::before { top: 0; }
-.custom-toggler span { top: 9px; }
+.custom-toggler span { top: 8px; }
 .custom-toggler::after { bottom: 0; }
 
 /* ================= RIGHT SECTION ================= */
@@ -110,48 +122,54 @@ body {
 
 /* ================= TABLET RESPONSIVE ================= */
 @media (max-width: 1199px) {
+
   .navbar-nav {
     gap: 25px;
   }
 
   .navbar-nav .nav-link {
-    font-size: 20px;
+    font-size: 18px;
   }
+
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE RESPONSIVE FIX ================= */
 @media (max-width: 991px) {
 
   body {
-    padding-top: 65px;
+    padding-top: 60px;
   }
 
   .custom-navbar {
     height: auto;
-    min-height: 65px;
-    padding: 8px 0;
+    min-height: 60px;
+    padding: 6px 0;
   }
 
   .navbar-logo {
-    height: 45px;
+    height: 42px !important;
   }
 
+  /* Collapse menu */
   .navbar-collapse {
-    background: linear-gradient(135deg, #009B83, #009B83);
-    margin-top: 10px;
-    border-radius: 12px;
-    padding: 15px 10px;
-    text-align: center;
+    background: #009B83;
+    margin-top: 8px;
+    border-radius: 10px;
+    padding: 12px 0;
+    max-height: 75vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
   }
 
   .navbar-nav {
     flex-direction: column !important;
-    gap: 15px;
+    gap: 8px;
     width: 100%;
   }
 
   .navbar-nav .nav-link {
-    font-size: 18px;
+    font-size: 16px;
+    padding: 6px 0;
     justify-content: center;
   }
 
@@ -159,16 +177,16 @@ body {
   .product-float-card {
     position: static;
     display: block;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 5px 0;
     margin-top: 5px;
-    padding: 8px 0;
     box-shadow: none;
   }
-
+     
   .product-float-item {
-    padding: 8px 0;
-    font-size: 15px;
+    font-size: 14px;
+    padding: 6px 0;
   }
 
   .nav-right {
@@ -180,15 +198,15 @@ body {
 @media (max-width: 480px) {
 
   .navbar-logo {
-    height: 38px;
+    height: 50px !important;
   }
 
   .navbar-nav .nav-link {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .product-float-item {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -197,4 +215,16 @@ body {
 .navbar-collapse.show {
   max-height: none !important;
   overflow: visible !important;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
