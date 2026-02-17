@@ -11,7 +11,6 @@ import {
 } from "react-icons/fa";
 import trimurathi from "../../assets/Logo/trimurti.png";
 import "./Navbar.css";
-// import LanguageSelector from "../LanguageSelector";
 
 const Navbar = () => {
   const API_BASE = import.meta.env.VITE_API_BASE_URL;
@@ -21,6 +20,7 @@ const Navbar = () => {
   const [showProducts, setShowProducts] = useState(false);
 
   const navbarTogglerRef = useRef(null);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     fetchCategories();
@@ -37,44 +37,62 @@ const Navbar = () => {
     }
   };
 
-  // ✅ Mobile navbar close function
   const closeNavbar = () => {
     if (window.innerWidth < 992 && navbarTogglerRef.current) {
       navbarTogglerRef.current.click();
     }
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setShowProducts(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-lg fixed-top custom-navbar">
-    <div className="container">
-  {/* HEADER ROW */}
-  <div className="d-flex w-100 align-items-center">
-    <NavLink
-      className="navbar-brand"
-      to="/"
-      onClick={closeNavbar}
-    >
-      <img src={trimurathi} alt="Company Logo" className="navbar-logo pb-2 rounded-circle " style={{height:"80px"}} />
-    </NavLink>
+      <div className="container position-relative">
 
-    <button
-      ref={navbarTogglerRef}
-      className="navbar-toggler custom-toggler ms-auto d-lg-none"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-    >
-      <span className="navbar-toggler-icon"></span>
-    </button>
-  </div>
+        {/* LOGO */}
+        <NavLink
+          className="navbar-brand"
+          to="/"
+          onClick={closeNavbar}
+        >
+          <img
+            src={trimurathi}
+            alt="Company Logo"
+            className="navbar-logo rounded-circle"
+          />
+        </NavLink>
 
-  {/* MENU */}
-  <div
-    className="collapse navbar-collapse navbar-collapse-fix"
-    id="navbarNav"
-  >
+        {/* TOGGLER */}
+        <button
+          ref={navbarTogglerRef}
+          className="navbar-toggler ms-auto d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-          <ul className="navbar-nav ms-auto align-items-center">
+        {/* MENU */}
+        <div
+          className="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav align-items-center">
+
             <li className="nav-item">
               <NavLink className="nav-link" to="/" end onClick={closeNavbar}>
                 <FaHome /> Home
@@ -87,16 +105,25 @@ const Navbar = () => {
               </NavLink>
             </li>
 
-            {/* PRODUCTS DROPDOWN */}
-            <li className="nav-item product-nav">
+            {/* PRODUCTS */}
+            <li
+              className="nav-item product-nav"
+              ref={dropdownRef}
+              onMouseEnter={() =>
+                window.innerWidth >= 992 && setShowProducts(true)
+              }
+              onMouseLeave={() =>
+                window.innerWidth >= 992 && setShowProducts(false)
+              }
+            >
               <span
                 className="nav-link product-trigger"
-                onClick={() => setShowProducts(!showProducts)}
+                onClick={() =>
+                  window.innerWidth < 992 &&
+                  setShowProducts(!showProducts)
+                }
               >
-                <FaBoxOpen className="me-1" /> Products
-                <span className={`nav-arrow ${showProducts ? "open" : ""}`}>
-                  ▾
-                </span>
+                <FaBoxOpen /> Products ▾
               </span>
 
               {showProducts && (
@@ -108,7 +135,7 @@ const Navbar = () => {
                         cat.slug ||
                         cat.name.toLowerCase().replace(/\s+/g, "-")
                       }`}
-                      className="product-float-item hover"
+                      className="product-float-item"
                       onClick={() => {
                         setShowProducts(false);
                         closeNavbar();
@@ -138,14 +165,10 @@ const Navbar = () => {
                 <FaEnvelope /> Contact
               </NavLink>
             </li>
+
           </ul>
         </div>
-        <div className="nav-right px-5 ">
-       {/* <LanguageSelector/> */}
       </div>
-      </div>
-
-       
     </nav>
   );
 };
